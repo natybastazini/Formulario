@@ -3,9 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulários</title>
 </head>
 <body>
-    
+    <h1 style="color: #ff1493;">Formulário para a coleta de dados do usuário.</h1>
+    <form action="">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome"> <br><br>
+        <label for="sobrenome">Sobrenome: </label>
+        <input type="text" name="sobrenome" id="sobrenome"> <br><br>
+
+        <input style="color: #ff1493; border-color: #ff1493; border-radius: 10px;" type="submit" value="Enviar">
+    </form>
+
+    <h1 style="color: black;">Formulário para questionar a linguagem favorita</h1>
+    <form action="" style="accent-color: #ff1493;">
+        <input type="radio" name="linguagem_favorita" id="html" value="html">
+        <label for="html">HTML</label> <br>
+
+        <input type="radio" name="linguagem_favorita" id="css" value="css">
+        <label for="css">CSS</label> <br>
+
+        <input type="radio" name="linguagem_favorita" id="js" value="js">
+        <label for="js">JavaScript</label> <br> <br>
+
+        <input style="color: #ff1493; border-color: #ff1493; border-radius: 10px;" type="submit" value="Enviar">
+    </form>
+
+    <h1 style="color: #ff1493;">Formulário para questionar os veículos que você tem. Utilizando checkbox para múltiplas respostas.</h1>
+    <!-- O action é o endereço do servidor backend/API -->
+    <form style="accent-color: #ff1493;" action="/server.php">
+        <input type="checkbox" name="bike" id="bike">
+        <label for="bike">Bicicleta</label> <br>
+
+        <input type="checkbox" name="carro" id="carro"> 
+        <label for="carro">Carro</label> <br>
+
+        <input type="checkbox" name="barco" id="barco">
+        <label for="barco">Barco</label> <br> <br>
+        
+        <input style="color: #ff1493; border-color: #ff1493; border-radius: 10px;" type="submit" value="Enviar">
+    </form>
+
+    <h1>Formulário com caixa de opção com select</h1>
+    <form action="">
+        <fieldset>
+        <label for="carros">Selecionar um carro:</label>
+        <!-- 
+        Habilita o modo lista, apresentando 3 itens por vez.
+        <select style="color: #ff1493; border-color: #ff1493; border-radius: 8px;" name="carros" id="carros" size="3" multiple></select> 
+        -->
+
+            <legend>Informações de carros:</legend>
+
+        <select style="color: #ff1493; border-color: #ff1493;" name="carros" id="carros">
+            <option value="BMW">BMW</option>
+            <option value="Prius">Prius</option>
+            <option value="HondaFit">HondaFit</option>
+            <option value="Fusca">Fusca</option>
+            <option value="Ka">Ka</option>
+            <option value="Ferrari">Ferrari</option>
+        </select>
+        <br><br>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Observações: </legend>
+
+        <!-- Área de entrada de texto grande. -->
+         <textarea name="obs" id="obs" rows="10" cols="30" placeholder="Escreva aqui a observação sobre o seu ca"></textarea>
+
+         </fieldset>
+    </form>
+
 </body>
 </html>
